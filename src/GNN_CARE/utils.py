@@ -13,13 +13,13 @@ from collections import defaultdict
 """
 
 
-def load_data(data):
+def load_data(root, data):
 	"""
 	Load graph, feature, and label given dataset name
 	:returns: home and single-relation graphs, feature, label
 	"""
 
-	prefix = 'data/'
+	prefix = root
 	if data == 'yelp':
 		data_file = loadmat(prefix + 'YelpChi.mat')
 		labels = data_file['label'].flatten()
